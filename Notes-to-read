@@ -1,0 +1,18 @@
+Things I have tested:
+
+Confirmed MongoDB connection is working
+    -.env is setup correctly
+    -node server.js successfully runs server and connects to MongoDB
+    
+
+
+Mongoose library is working properly 
+    -Form.js is setup correctly
+
+
+API route /api/forms is correct in forms.js
+Postman is succesfully executing POST, GET, PUT, DELETE 
+
+
+Controller logic such as createForm and getAllForms are working
+    
