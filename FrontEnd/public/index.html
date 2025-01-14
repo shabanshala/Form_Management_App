@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form List</title>
+</head>
+<body>
+  <h1>Available Forms</h1>
+  <ul id="form-list"></ul>
+  <script>
+    
+    fetch('http://localhost:5000/api/forms')
+      .then(response => response.json())
+      .then(forms => {
+        const list = document.getElementById('form-list');
+        forms.forEach(form => {
+          const listItem = document.createElement('li');
+          listItem.innerHTML = `<a href="${form.link}" target="_blank">${form.name}</a>`;
+          list.appendChild(listItem);
+        });
+      })
+      .catch(error => console.error('Error fetching forms:', error));
+  </script>
+</body>
+</html>
